@@ -1,94 +1,106 @@
-"use client";
+'use client';
 
-import React from 'react';
-import {HomeFilled, InfoCircleFilled, LaptopOutlined, NotificationOutlined, UserOutlined} from '@ant-design/icons';
-import type {MenuProps} from 'antd';
-import {Breadcrumb, Layout, Menu, theme} from 'antd';
-import {useRouter} from "next/navigation";
+import React, { useState } from 'react';
+import { DownOutlined, RightOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Breadcrumb, Button, Dropdown, Layout, Menu, theme } from 'antd';
+import { useRouter } from 'next/navigation';
 
-const {Header, Content, Sider} = Layout;
-
-const items1: MenuProps['items'] = ['1', '2', '3'].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));
-
-const items2: MenuProps['items'] = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
-  (icon, index) => {
-    const key = String(index + 1);
-
-    return {
-      key: `sub${key}`,
-      icon: React.createElement(icon),
-      label: `subnav ${key}`,
-
-      children: new Array(4).fill(null).map((_, j) => {
-        const subKey = index * 4 + j + 1;
-        return {
-          key: subKey,
-          label: `option${subKey}`,
-        };
-      }),
-    };
-  },
-);
+const { Header, Content, Sider } = Layout;
 
 interface AuthenticatedLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({children}) => {
+const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) => {
   const router = useRouter();
+  const [openDropdown, setOpenDropdown] = useState(false);
 
   const {
-    token: {colorBgContainer},
+    token: { colorBgContainer },
   } = theme.useToken();
 
-  const menu: MenuProps['items'] = [
-    {
-      key: `/home`,
-      icon: <HomeFilled/>,
-      label: `Home`,
-    },
-    {
-      key: `/about`,
-      icon: <InfoCircleFilled/>,
-      label: `About`,
-    }
-  ]
+  const menu1 = (
+    <Menu style={{ backgroundColor: '#070720' }}>
+      <Menu.Item key="1">
+        <span style={{ color: 'white' }}>link kosong</span>
+      </Menu.Item>
+    </Menu>
+  );
+
+  const handleDropdownClick = () => {
+    setOpenDropdown(!openDropdown);
+  };
+
+  // const menu: MenuProps['items'] = [
+  //   {
+  //     key: `/home`,
+  //     icon: <HomeFilled />,
+  //     label: `Home`,
+  //   },
+  //   {
+  //     key: `/about`,
+  //     icon: <InfoCircleFilled />,
+  //     label: `About`,
+  //   },
+  // ];
 
   return (
     <Layout>
-      <Header className="header flex">
-        <div className={"text-white"}>y</div>
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[]} items={items1} className={"flex-1"}/>
+      <Header
+        className="header"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#070720',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100%',
+          }}
+        >
+          <span style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}>Menu</span>
+        </div>
       </Header>
-      <Layout>
-        <Sider width={200} style={{background: colorBgContainer}}>
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['sub1']}
-            style={{height: '100%', borderRight: 0}}
-            items={menu.concat(items2)}
-            onClick={({key}) => {
-              router.push(key);
-              // console.log(`key ${key} route not found`);
-            }}
-          />
-        </Sider>
-        <Layout style={{padding: '0 24px 24px', height: 'calc(100vh - 64px)'}}>
-          <Content
-            style={{
-              padding: 24,
-              margin: '16px 0 0 0',
-              minHeight: 280,
-              background: colorBgContainer,
-            }}
+      <Layout style={{ height: 'calc(100vh - 64px)' }}>
+        <Content
+          style={{
+            padding: 24,
+            backgroundColor: '#0B0C2A',
+          }}
+        >
+          <Dropdown
+            overlay={menu1}
+            placement={openDropdown ? 'bottomLeft' : 'bottomRight'}
+            visible={openDropdown}
+            onVisibleChange={setOpenDropdown}
           >
-            {children}
-          </Content>
-        </Layout>
+            <Button
+              style={{
+                backgroundColor: '#070720',
+                color: 'black',
+                boxShadow: '0px 7px 10px rgba(0, 0, 0, 0.1)',
+                height: '40px',
+                width: '100%',
+                fontFamily: 'inherit',
+              }}
+              onClick={handleDropdownClick}
+            >
+              <span style={{ color: 'white' }}>About Us</span>{' '}
+              {openDropdown ? (
+                <DownOutlined style={{ fontSize: '12px' }} />
+              ) : (
+                <RightOutlined style={{ fontSize: '12px' }} />
+              )}
+            </Button>
+          </Dropdown>
+          {children}
+        </Content>
       </Layout>
     </Layout>
   );
