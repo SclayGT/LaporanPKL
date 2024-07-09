@@ -10,6 +10,7 @@ const Page = () => {
 
   const router = useRouter();
 
+    <title>Our Attachment</title>
   return (
     <>
       <Header
@@ -26,7 +27,7 @@ const Page = () => {
           zIndex: 1, // Ensure it stays on top of other content
         }}
       >
-        <div>
+                <div>
             <button
             onClick={() => router.push('/Menu')}>
              <span style={{ color: 'white' }}>balik lur</span>
@@ -40,7 +41,7 @@ const Page = () => {
             height: '100%',
           }}
         >
-          <span style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}>About Us</span>
+          <span style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}>Our Attachment</span>
         </div>
       </Header>
       
