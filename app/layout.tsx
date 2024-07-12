@@ -6,15 +6,11 @@ import Script from 'next/script';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* ugh */}
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet"/>
+      </head>
       <body>
-        <Script src="/api/env" strategy={'beforeInteractive'}></Script>
+        <Script src="/api/env" strategy="beforeInteractive" />
         <Provider>{children}</Provider>
       </body>
     </html>
