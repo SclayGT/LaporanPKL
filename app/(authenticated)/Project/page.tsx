@@ -47,6 +47,7 @@ const Page = () => {
         </div>
       </Header>
       <body>
+        <div>
         <Card
         style={
           {
@@ -63,6 +64,7 @@ const Page = () => {
             top: '200px',
           }
         }>
+          <div>
       <div
                 style={{
                   width: '850px',
@@ -77,7 +79,7 @@ const Page = () => {
                   top: '10px',
                 }}
               >
-                <img src="/kk.png" style={{ width: '70%', borderRadius: '20px' }} />
+                <img src="/kk.png"/>
               </div>
               <div
               style={{
@@ -120,7 +122,9 @@ const Page = () => {
               </Row>
               
               </div>
+              </div>
           </Card>
+          </div>
       </body>
     </>
   );
