@@ -4,7 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 const Page = () => {
-  const fontFamily = 'Inika, serif';
+  const fontFamily = 'Inter, sans-serif';
   const router = useRouter();
 
   return (
@@ -35,7 +35,7 @@ const Page = () => {
             cursor: 'pointer',
           }}
         >
-          <img src="/panah.svg" style={{ width: '17px', height: '17px', marginRight: '10px', marginLeft: '20px' }} />
+          <img src="/iconBack.svg" style={{ width: '17px', height: '17px', marginRight: '10px', marginLeft: '20px' }} />
           <span style={{ color: 'white', fontFamily, fontSize: '20px' }}>Back</span>
         </button>
         <div
@@ -49,27 +49,25 @@ const Page = () => {
         </div>
         <div style={{ width: '100px' }} />
       </div>
-      <div style={{ width: '300px', height: '60px', backgroundColor: '#1E0E41', margin: '150px 100px' }}>
-        <p style={{ color: 'white', padding: '15px 18px', fontFamily, fontSize: '25px' }}>Welcome to our report</p>
+      <div style={{ width: '300px', height: '50px', backgroundColor: '#1E0E41', margin: '150px 90px' }}>
+        <p style={{ color: 'white', padding: '17px 40px', fontFamily, fontSize: '20px' }}>Welcome to our report</p>
       </div>
-      <div style={{ padding: '0 100px', marginTop: '-230px', display: 'flex', alignItems: 'center' }}>
-        <h1 style={{ color: 'white', fontSize: '40px', lineHeight: '1.3', marginBottom: '200px', fontFamily }}>
-          HI, WE ARE FROM DIGNITAS<br />ACADEMY WHICH IS ABLE TO<br />DEVELOP THE WEB
-        </h1>
-        <img 
-          src="/dignitas.svg" // Ganti dengan path gambar Anda
-          alt="Dignitas Academy"
-          style={{ width: '50%', marginLeft: '200px', marginTop: '90px' }} // Sesuaikan ukuran gambar
-        />
+      <div style={{ padding: '0 100px', marginTop: '-140px', display: 'flex', alignItems: 'flex-start' }}>
+        <div>
+          <h1 style={{ color: 'white', fontSize: '40px', lineHeight: '1.3', marginBottom: '20px', fontFamily }}>
+            HI, WE ARE FROM DIGNITAS<br />ACADEMY WHICH IS ABLE TO<br />DEVELOP THE WEB
+          </h1>
+          <p style={{ color: 'white', fontFamily, fontSize: '20px',lineHeight: '1.2' }}> 
+            At Dignitas, we study a dynamic web that is able to adapt and has the ability to change 
+            content and layout in real-time based on user interactions. We also learn various technologies
+            that support dynamic web development, such as JavaScript and modern frameworks such as React.
+            Apart from that, we also understand the importance of optimizing performance and security in
+            web development so that users get the best experience. We created this project through the 
+            use of NestJS for the backend and Next.js for the frontend.
+          </p>
+        </div>
+        <img src="/dignitas.svg" style={{ width: '70%', marginLeft: '200px', marginTop: '-10px' }} />
       </div>
-      <p style={{ color: 'white', fontFamily}}> 
-          At Dignitas, we study a dynamic web that is able to adapt and has the ability to change 
-          content and layout in real-time based on user interactions. We also learn various technologies
-          that support dynamic web development, such as JavaScript and modern frameworks such as React 
-          Apart from that, we also understand the importance of optimizing performance and security in
-          web development so that users get the best experience. We created this project through the 
-          use of NestJS for the backend and Next.js for the frontend.
-        </p>
       <div
         style={{
           backgroundColor: '#070720',
