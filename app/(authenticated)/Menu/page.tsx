@@ -110,6 +110,29 @@ const Page = () => {
           <span style={{ color: 'white' }}>Our Attachment</span>
         </Button>
       </div>
+      <div
+        style={{
+          backgroundColor: '#070720',
+          height: '90px',
+          padding: '20px 0',
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          color: 'white',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/iconBKA.svg" style={{ width: '90px', height: '90px', marginLeft: '100px' }} />
+        </div>
+        <div style={{ flex: 1, textAlign: 'right', paddingRight: '20px' }}>
+          <span style={{ fontSize: '14px', fontFamily }}>Copyright ©2024. All Rights Reserved</span>
+        </div>
+      </div>
     </>
   );
 };
