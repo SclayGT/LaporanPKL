@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Button, Card, Col, Row } from "antd";
-import { store } from "#/store";
-import { Header } from "antd/es/layout/layout";
-import { useRouter } from "next/navigation";
+import React from 'react';
+import { Button, Card, Col, Row } from 'antd';
+import { store } from '#/store';
+import { Header } from 'antd/es/layout/layout';
+import { useRouter } from 'next/navigation';
 
 const Page = () => {
   const fontFamily = 'Inika, serif';
@@ -30,7 +30,7 @@ const Page = () => {
         }}
       >
         <button
-          onClick={() => router.push('/Menu')}
+          onClick={() => router.push('/menu')}
           style={{
             backgroundColor: 'transparent',
             border: 'none',
@@ -39,7 +39,10 @@ const Page = () => {
             cursor: 'pointer',
           }}
         >
-          <img src="/panah.svg" style={{ width: '17px', height: '17px', marginRight: '10px', marginLeft: '20px' }} />
+          <img
+            src="/panah.svg"
+            style={{ width: '17px', height: '17px', marginRight: '10px', marginLeft: '20px' }}
+          />
           <span style={{ color: 'white', fontFamily, fontSize: '20px' }}>Back</span>
         </button>
         <div
@@ -68,7 +71,14 @@ const Page = () => {
             alignItems: 'center',
           }}
         >
-          <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
             <div
               style={{
                 width: '100%',
@@ -81,7 +91,6 @@ const Page = () => {
               }}
             >
               <img src="/login.png" style={{ width: '100%', height: 'auto' }} />
-            
 
               <Row style={{ marginTop: '10px' }}>
                 <Col>
@@ -95,7 +104,9 @@ const Page = () => {
               </Row>
               <Row>
                 <Col>
-                  <h2 style={{ color: 'white', marginTop: '0px' }}>Built with: NestJs, NextJS, TypeScript,</h2>
+                  <h2 style={{ color: 'white', marginTop: '0px' }}>
+                    Built with: NestJs, NextJS, TypeScript,
+                  </h2>
                 </Col>
               </Row>
               <Row>
@@ -128,7 +139,6 @@ const Page = () => {
                 </Col>
               </Row>
             </div>
-          
           </div>
         </Card>
       </div>
