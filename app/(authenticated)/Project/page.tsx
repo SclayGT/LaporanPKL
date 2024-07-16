@@ -10,9 +10,10 @@ const Page = () => {
   const fontFamily = 'Inika, serif';
   const router = useRouter();
 
+  <title>Project</title>;
+
   return (
     <>
-      <title>Project</title>
       <div
         className="header"
         style={{
@@ -30,7 +31,7 @@ const Page = () => {
         }}
       >
         <button
-          onClick={() => router.push('/menu')}
+          onClick={() => router.push('/Menu')}
           style={{
             backgroundColor: 'transparent',
             border: 'none',
@@ -56,70 +57,73 @@ const Page = () => {
         </div>
         <div style={{ width: '100px' }} />
       </div>
-      <div style={{ paddingTop: '100px', paddingLeft: '5%', paddingRight: '5%' }}>
+      <div>
         <Card
           style={{
-            width: '100%',
-            maxWidth: '1200px',
-            margin: '0 auto',
-            height: 'auto',
+            width: '70%',
+            height: '450px',
             backgroundColor: '#070720',
             border: 'none',
             borderRadius: '0px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            position: 'absolute',
+            right: '300px',
+            top: '200px',
           }}
         >
-          <div
-            style={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
+          <div>
             <div
               style={{
-                width: '100%',
-                maxWidth: '850px',
+                width: '800px',
+                height: '430px',
                 backgroundColor: '#D9D9D9',
                 borderRadius: '0px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                position: 'absolute',
+                left: '10px',
+                top: '10px',
               }}
             >
-              <img src="/login.png" style={{ width: '100%', height: 'auto' }} />
-
-              <Row style={{ marginTop: '10px' }}>
+              <img src="/login.png" style={{ width: '800px', height: '430px' }} />
+            </div>
+            <div
+              style={{
+                marginTop: '10px',
+                marginLeft: '800px',
+              }}
+            >
+              <Row style={{ marginTop: '0px' }}>
                 <Col>
                   <h1 style={{ color: 'white' }}>Project Info</h1>
                 </Col>
               </Row>
               <Row style={{ marginTop: '10px' }}>
                 <Col>
-                  <h2 style={{ color: 'white' }}>Project Name: Inventaris Sekolah</h2>
+                  <h2 style={{ color: 'white' }}>Project Name : Inventaris Sekolah</h2>
                 </Col>
               </Row>
               <Row>
                 <Col>
                   <h2 style={{ color: 'white', marginTop: '0px' }}>
-                    Built with: NestJs, NextJS, TypeScript,
+                    Build with : NestJs, NextJS, TypeScript,
                   </h2>
                 </Col>
               </Row>
               <Row>
-                <h2 style={{ color: 'white' }}>React, AntDesign, PostgreSQL, Postman</h2>
+                <h2 style={{ color: 'white' }}>React, AntDesain , PostgreSQL, Postman</h2>
               </Row>
-              <Row>
+              <Row style={{}}>
                 <Col>
-                  <h2 style={{ color: 'white' }}>Year: 2024</h2>
+                  <h2 style={{ color: 'white' }}>Year : 2024</h2>
                 </Col>
               </Row>
-              <Row>
+              <Row style={{ marginBottom: '30px' }}>
                 <Col>
-                  <h2 style={{ color: 'white' }}>Development Time: 6 Months</h2>
+                  <h2 style={{ color: 'white' }}>Development Time : 6 Mounth</h2>
                 </Col>
               </Row>
               <Row>
@@ -134,7 +138,7 @@ const Page = () => {
                     }}
                     onClick={() => router.push('/github')}
                   >
-                    <span style={{ color: 'white' }}>Github</span>
+                    <span style={{ color: 'white', marginRight: '50px' }}>Github</span>
                   </button>
                 </Col>
               </Row>
