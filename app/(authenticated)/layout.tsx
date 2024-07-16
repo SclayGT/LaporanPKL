@@ -32,6 +32,7 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) =
       ? {
           position: 'relative', // Ensure content remains above background
           zIndex: 1, // Ensure content is above background
+          padding: '250px 40px',
         }
       : {};
 
@@ -48,7 +49,6 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) =
         </Content>
         <div
           style={{
-            padding: '1000px 40px',
             ...contentStyle,
           }}
         />
