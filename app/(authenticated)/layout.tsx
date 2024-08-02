@@ -15,28 +15,43 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) =
 
   const backgroundStyle =
     pathname === '/about'
-      ? { 
-          backgroundImage: 'url("/background.svg")',
+      ? {
+          background: 'url("/background.svg")',
           backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          position: 'relative', // Ensures relative positioning
+          height: '100vh', // Ensures full viewport height
+          width: '100%', // Ensures full viewport width
         }
       : {
           backgroundColor: '#0B0C2A',
         };
 
-        
+  const contentStyle =
+    pathname === '/about'
+      ? {
+          position: 'relative', // Ensure content remains above background
+          zIndex: 1, // Ensure content is above background
+          padding: '250px 40px',
+        }
+      : {};
 
   return (
     <Layout>
-      <Layout style={{ height: 'calc(100vh - 64px)' }}>
+      <Layout style={{ minHeight: '100vh', backgroundColor: '#0B0C2A' }}>
         <Content
           style={{
-            padding: '70px 40px',
             ...backgroundStyle,
+            backgroundColor: '#0B0C2A', // Ensure background color is visible
           }}
         >
           {children}
         </Content>
+        <div
+          style={{
+            ...contentStyle,
+          }}
+        />
       </Layout>
     </Layout>
   );
