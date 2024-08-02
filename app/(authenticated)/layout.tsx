@@ -27,6 +27,8 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) =
           backgroundColor: '#0B0C2A',
         };
 
+        
+
   const contentStyle =
     pathname === '/about'
       ? {

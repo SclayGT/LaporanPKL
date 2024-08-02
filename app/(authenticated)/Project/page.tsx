@@ -31,7 +31,7 @@ const Page = () => {
         }}
       >
         <button
-          onClick={() => router.push('/menu')}
+          onClick={() => router.push('/Menu')}
           style={{
             backgroundColor: 'transparent',
             border: 'none',
@@ -146,6 +146,7 @@ const Page = () => {
           </div>
         </Card>
       </div>
+      
       <div
         style={{
           backgroundColor: '#070720',

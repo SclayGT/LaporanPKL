@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Button, Card } from 'antd';
+import { Button, Card, Row } from 'antd';
 import { store } from '#/store';
 import { Header } from 'antd/es/layout/layout';
 import { useRouter } from 'next/navigation';
@@ -30,7 +30,7 @@ const Page = () => {
         }}
       >
         <button
-          onClick={() => router.push('/menu')}
+          onClick={() => router.push('/Menu')}
           style={{
             backgroundColor: 'transparent',
             border: 'none',
@@ -58,12 +58,171 @@ const Page = () => {
         </div>
         <div style={{ width: '100px' }} />
       </div>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: '100px',
+          marginTop: '100px',
+          flexDirection: 'column',
+          gap: '20px',
+        }}
+      >
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '50px',
+          height: '350px',          
+          width: '1200px',
+          backgroundColor: 'white',
+        }}
+      >
+        <img src="" alt="" />
+      </div>
+      <Row>
+        <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '20px',
+          height: '580px',          
+          width: '570px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+        
+        <div
+        style={{
+          marginLeft: '20px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '20px',
+          height: '285px',          
+          width: '282px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+
+        <div
+        style={{
+          marginLeft: '20px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '20px',
+          height: '285px',          
+          width: '282px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+
+        </Row>
+        <Row>
+        <div
+                style={{
+
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginTop: '20px',
+                  height: '285px',          
+                  width: '282px',
+                  backgroundColor: 'white',
+                }}
+        >
+        </div>
+
+        <div
+                style={{
+                  marginLeft: '20px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginTop: '20px',
+                  height: '285px',          
+                  width: '282px',
+                  backgroundColor: 'white',
+                }}
+        >
+        </div>
+
+        <div
+        style={{
+          marginLeft: '20px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '-274px',
+          height: '585px',          
+          width: '582px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+
+        </Row>
+        <Row>
+
+        <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '285px',          
+          width: '580px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+
+        <div
+        style={{
+          marginLeft: '20px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '285px',          
+          width: '282px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+
+        <div
+        style={{
+          marginLeft: '20px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '285px',          
+          width: '282px',
+          backgroundColor: 'white',
+        }}
+        >
+        </div>
+
+        </Row>
+
+        </div>
+
+            {/* Footer */}
       <div
         style={{
           backgroundColor: '#070720',
           height: '90px',
           padding: '20px 0',
-          position: 'fixed',
+          position: 'relative',
+          marginTop: '40px',
           bottom: 0,
           left: 0,
           right: 0,

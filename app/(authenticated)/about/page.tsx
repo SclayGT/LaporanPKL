@@ -30,7 +30,7 @@ const Page = () => {
         }}
       >
         <button
-          onClick={() => router.push('/menu')}
+          onClick={() => router.push('/Menu')}
           style={{
             backgroundColor: 'transparent',
             border: 'none',
