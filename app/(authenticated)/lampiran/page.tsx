@@ -82,7 +82,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
       >
-        <img src="" alt="" />
+        <img src="/poto1.svg" alt="" />
       </div>
       <Row>
         <div
@@ -96,6 +96,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
         >
+
         </div>
         
         <div
@@ -110,6 +111,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
         >
+          <img src="/poto3.svg" alt="" />
         </div>
 
         <div
@@ -140,6 +142,7 @@ const Page = () => {
                   backgroundColor: 'white',
                 }}
         >
+          <img src="/poto4.svg" alt="" />
         </div>
 
         <div
@@ -168,6 +171,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
         >
+        <img src="/poto2.svg" alt="" />
         </div>
 
         </Row>
@@ -183,6 +187,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
         >
+          <img src="/poto5.svg" alt="" />
         </div>
 
         <div
@@ -196,6 +201,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
         >
+          <img src="/poto6.svg" alt="" />
         </div>
 
         <div
@@ -209,6 +215,7 @@ const Page = () => {
           backgroundColor: 'white',
         }}
         >
+          <img src="/poto7.svg" alt="" />
         </div>
 
         </Row>

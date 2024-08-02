@@ -226,9 +226,14 @@ const Page = () => {
       </div>
       <div> 
       <Card
-        style={{ marginTop: '50px', marginBottom: '50px', marginLeft: '100px', marginRight: '100px' }}
+        style={{ 
+          marginTop: '50px', 
+          marginBottom: '50px', 
+          marginLeft: '100px', 
+          marginRight: '100px' 
+        }}
         >
-
+          
         </Card>
         </div>
       <div
