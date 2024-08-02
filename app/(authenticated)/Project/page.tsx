@@ -151,8 +151,8 @@ const Page = () => {
         style={{
           backgroundColor: '#070720',
           height: '90px',
-          padding: '20px 0',
-          // position: 'fixed',
+          padding: '20px',
+          position: 'fixed',
           bottom: 0,
           left: 0,
           right: 0,

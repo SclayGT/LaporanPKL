@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import '../../globals.css';
-import { Card } from 'antd';
+import { Card, Row } from 'antd';
 
 const Page = () => {
   const fontFamily = 'Inter, sans-serif';
@@ -40,7 +40,7 @@ const Page = () => {
           }}
         >
           <img
-            src="/iconBack.svg"
+            src="/panah.svg"
             style={{ width: '17px', height: '17px', marginRight: '10px', marginLeft: '20px' }}
           />
           <span style={{ color: 'white', fontFamily, fontSize: '20px' }}>Back</span>
@@ -52,7 +52,9 @@ const Page = () => {
             justifyContent: 'center',
           }}
         >
-          <span style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}>About Us</span>
+          <span style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}>
+            About
+          </span>
         </div>
         <div style={{ width: '100px' }} />
       </div>
@@ -227,13 +229,69 @@ const Page = () => {
       <div> 
       <Card
         style={{ 
+          width: '1000px',
+          height: '410px',
           marginTop: '50px', 
-          marginBottom: '50px', 
-          marginLeft: '100px', 
-          marginRight: '100px' 
+          backgroundColor: '#07081B',
+          border: 'none',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          left: '25%',
+          borderRadius: '80px',
         }}
         >
-          
+          <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginBottom: '50px',
+                    marginTop: '100px',
+                    flexDirection: 'column',
+                    gap: '20px',
+                  }}
+          >
+            <span>
+              <p style={{ color: 'white', fontSize: '35px', fontFamily }}>Our Team</p>
+            </span>
+          </div>
+          <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: '100px',
+          marginTop: '50px',
+          flexDirection: 'column',
+          gap: '20px',
+        }}
+      >
+        <Row>
+
+        <div style={{ marginLeft : '20px' }}>
+          <Image src="/vcc.svg" width={100} height={100} />
+        </div>
+        <div style={{ marginLeft : '20px' }}>
+          <Image src="/nest.svg" width={100} height={100} />
+          </div>
+          <div style={{ marginLeft : '20px' }}>
+          <Image src="/nextjs.svg" width={100} height={100} />
+          </div>
+          <div style={{ marginLeft : '20px' }}>
+          <Image src="/ts.svg" width={100} height={100} />
+          </div>
+          <div style={{ marginLeft : '20px' }}>
+          <Image src="/react.svg" width={100} height={100} />
+          </div>
+          <div style={{ marginLeft : '20px' }}>
+          <Image src="/db.svg" width={100} height={100} />
+          </div>
+          <div style={{ marginLeft : '20px' }}>
+          <Image src="/post.svg" width={100} height={100} />
+          </div>
+        </Row>
+          </div>
         </Card>
         </div>
       <div
@@ -247,7 +305,7 @@ const Page = () => {
           alignItems: 'center',
           color: 'white',
         }}
-      >
+      >z
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <img src="/iconBKA.svg" style={{ width: '90px', height: '90px', marginLeft: '100px' }} />
         </div>
