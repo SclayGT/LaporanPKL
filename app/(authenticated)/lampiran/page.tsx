@@ -54,6 +54,11 @@ const Page = () => {
           </div>
           <div style={{ width: '100px' }} />
         </div>
+
+
+
+
+
         <div
         style={{
           backgroundColor: '#070720',
@@ -76,6 +81,7 @@ const Page = () => {
         <div style={{ flex: 1, textAlign: 'right', paddingRight: '20px' }}>
           <span style={{ fontSize: '14px', fontFamily }}>Copyright ©2024. All Rights Reserved</span>
         </div>
+        
       </div>
     </>
   );

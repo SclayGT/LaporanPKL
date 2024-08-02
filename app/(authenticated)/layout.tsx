@@ -24,6 +24,8 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) =
           backgroundColor: '#0B0C2A',
         };
 
+        
+
   return (
     <Layout>
       <Layout style={{ height: 'calc(100vh - 64px)' }}>
